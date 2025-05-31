@@ -19,7 +19,8 @@ devName = input("Enter the Developer's name (this can be changed later.)\n")
 modName = input("Enter name of your mod (this can be changed later.)\n")
 authorName = input("Enter your author name (this can be changed later.)\n")
 
-if ask_yes_no("Sanity check, is this correct?\nMod Name:", modName, "\nMod Author", authorName, "\nGame Name:", gameName, "\nGame Author", devName, "\nDirectory:", pwd):
+print("Mod Name:", modName, "\nMod Author", authorName, "\nGame Name:", gameName, "\nGame Author", devName, "\nDirectory:", pwd)
+if ask_yes_no("Sanity check, is this correct? "):
     projFolderDir = f"{pwd}/{projectName}"
     projdata = [projectName, gameName, devName, modName, authorName, projFolderDir]
     
@@ -51,4 +52,3 @@ else:
 #parse first 24 lines or until the "Preferences Loaded" msg
 
 #create AssemblyInfo.cs and put following data
-
